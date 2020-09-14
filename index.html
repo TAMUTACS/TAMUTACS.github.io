@@ -7,8 +7,9 @@
 		crossorigin="anonymous"></script>
 <script type="text/javascript">
 
-jQuery.get("http://ipinfo.io?token=$b141e80f25813f", function (response) {
-    if(response.country === "US"){
+jQuery.get("http://ipinfo.io", function (response) {
+    console.log("asdfghjk");
+	if(response.country === "US"){
 	console.log("in US");	
 }
 }, "jsonp");
