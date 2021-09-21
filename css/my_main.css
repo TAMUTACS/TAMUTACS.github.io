@@ -12,6 +12,15 @@ a:hover {
     color: #2baced;
 }
 
+.btn-primary {
+    background-color: #132fa1;
+}
+
+.btn-primary:hover {
+    background: #00b3db;
+    border-color: #00b3db;
+}
+
 .sp-im {
     width: 190px;
     height: auto;
@@ -22,7 +31,7 @@ a:hover {
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Lato', sans-serif;
     overflow: hidden;
 }
 
@@ -92,7 +101,7 @@ body {
 .calendar .is-today {
     opacity: 1;
     color: #f00;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .card {
@@ -230,7 +239,7 @@ svg:not(:root) {
     text-align: center;
 }
 
-#onel, #twol, #threel, #fourl, #sixl, #fivel {
+#about, #events, #officers, #guests, #contact {
     padding-top: 25px;
     position: relative;
     top: -60px;
@@ -414,6 +423,7 @@ svg:not(:root) {
 .content h1 {
     font-size: 600%;
     color: #132fa1;
+    font-weight: bold;
 }
 
 h2 {
@@ -421,7 +431,8 @@ h2 {
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .responsive-cal {
@@ -481,11 +492,5 @@ anim {
     stroke-width: 4;
     stroke-dasharray: 300;
   }
-
-  #ix{
-    color: black;
-    font-weight: bold;
-  }
-  
 
   

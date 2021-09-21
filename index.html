@@ -44,14 +44,16 @@ jQuery.get("https://ipinfo.io?token=b141e80f25813f", function (response) {
 
 	<title>TACS</title>
 	<!--FONTS-->
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 	<!--CSS-->
 	<link rel="stylesheet" href="css/normalize_min.css">
 	<link rel="stylesheet" href="css/milligram_cmin.css" type="text/css" charset="utf-8">
 
 	<link rel="stylesheet" href="css/gridly.min.css" type="text/css" charset="utf-8">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/ea9b8b20ae.js" crossorigin="anonymous"></script>
 	<!--JS-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -80,24 +82,20 @@ jQuery.get("https://ipinfo.io?token=b141e80f25813f", function (response) {
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#sixl"
+						<a class="nav-link js-scroll-trigger" href="#about"
 							style="padding-top: 10px; padding-bottom: 0;">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#twol"
+						<a class="nav-link js-scroll-trigger" href="#events"
 							style="padding-top: 10px; padding-bottom: 0;">Events</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#threel"
-							style="padding-top: 10px; padding-bottom: 0;">Members</a>
+						<a class="nav-link js-scroll-trigger" href="#officers"
+							style="padding-top: 10px; padding-bottom: 0;">Officers</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#fivel"
-							style="padding-top: 10px; padding-bottom: 0;">Industry Partners</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#fourl"
-							style="padding-top: 10px; padding-bottom: 0;">Contact</a>
+						<a class="nav-link js-scroll-trigger" href="#guests"
+							style="padding-top: 10px; padding-bottom: 0;">Guest Speakers</a>
 					</li>
 				</ul>
 			</div>
@@ -317,36 +315,31 @@ jQuery.get("https://ipinfo.io?token=b141e80f25813f", function (response) {
 			
 				<div class="con-content">
 				<h1 style="margin-bottom: 25px;">{TACS}</h1>
-				<h3 id="ix" style="margin: 75px; margin-top: 0;">The Official Student Chapter of the Association of Computing
-					Machinery @ Texas A&M University</h3>
+				<h3 id="ix" style="margin: 40px; margin-top: 0;">The Official Student Chapter of ACM @ Texas A&M University</h3>
 				<div id="sub" class="row">
 					<div class="container">
-
-
-						<form action="https://formspree.io/xdowklzg" method="POST">
-
-							<label style="display: flex;justify-content: center;">
-								Get Updates!
-							</label>
-
-							<label style="display: flex;justify-content: center;">
-								<input style="width: 60%;" border-color: lightgrey;" placeholder="name@example.com" type="text" name="_replyto">
-							</label>
-
-						</form>
-
+						<div style="display: flex;justify-content: center;width: 100%;">
+							Join our email list
+						</div>
+						<form class="form-inline" style="justify-content: center; margin-top:3%;" onsubmit="subscribe()">
+							<div class="form-group mb-2">
+							  <label for="form_email" class="sr-only">Email</label>
+							  <input type="text" style="margin-right: 10px; border-color: #132fa1;" class="form-control-plaintext" id="form_email" placeholder="example@tamu.edu">
+							</div>
+							<button type="submit" class="btn btn-primary mb-2" style="text-transform: none; font-size: 1em;">Subscribe</button>
+						  </form>
 					</div>
 					<div class="container">
 						<div style="display: flex;justify-content: center;width: 100%;">
-							Connect with TACS!
+							Connect with TACS
 						</div>
 						<div style="display: flex;justify-content: center;width: 100%;padding: 16px;">
 							<a title='Email' target='_blank' href='mailto:tacs-officers@lists.tamu.edu'><i class="fa fa-envelope"
 									style="font-size:32px; margin-right: 16px;"></i></a>
-							<a title='Slack' target='_blank' href='https://tamu-computingsociety.slack.com/'><i class="fa fa-slack"
+							<a title='Discord' target='_blank' href='https://discord.com/invite/Jthf5kQadT'><i class="fab fa-discord"
 									style="font-size:32px; margin-right: 16px;"></i></a>
-							<a title='Facebook' target='_blank' href='https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F349859495183991%2F'><i class="fa fa-facebook"
-									style="font-size:32px; margin-right: 16px;"></i></a>
+							<a title='LinkedIn' target='_blank' href='https://www.linkedin.com/company/tamucs/'><i class="fa fa-linkedin"
+								style="font-size:32px; margin-right: 16px;"></i></a>
 							<a title='Instagram' target='_blank' href='https://www.instagram.com/tacstamu/'><i class="fa fa-instagram"
 									style="font-size:32px;"></i></a>
 						</div>
@@ -360,8 +353,8 @@ jQuery.get("https://ipinfo.io?token=b141e80f25813f", function (response) {
 
 	<div id="rst" class="row conta">
 		<div id="mm" class="col">
-			<div id="sixl"></div>
-			<div id="one" class="row" style="min-height: 777px;width: 95%;margin: 0 auto;">
+			<div id="about"></div>
+			<div id="one" class="row" style="width: 95%;margin: 0 auto;">
 
 				<div class="tabb col">
 					<div class="row">
@@ -406,9 +399,7 @@ jQuery.get("https://ipinfo.io?token=b141e80f25813f", function (response) {
 								<h3>Panels</h3>
 								<p>Listen to professionals and students talk about their experiences navigating through
 									challenges like graduate school or the job market.</p>
-								<p><b>Note: You don't need to be a member to attend, and all of our meetings have food!
-										Take a look at our <a style="color: blue;" href="#twol">calendar</a> for details
-										about our next meeting.</b></p>
+								<p><b>Note: You don't need to be a member to attend our meetings!</b></p>
 							</div>
 						</div>
 					</div>
@@ -437,106 +428,55 @@ jQuery.get("https://ipinfo.io?token=b141e80f25813f", function (response) {
 
 
 			</div>
-			<div id="twol" style="padding: 0;"></div>
-			<div id="two" class="row" style="min-height: 877px">
+			<div id="events" style="padding: 0;"></div>
+			<div id="two" class="row" style="">
 				<div class="col">
 					<div class="content-section" id="events">
 						<div class="container">
 							<div class="row">
 								<div class="heading-section col-md-12 text-center">
 									<h2><b>Events</b></h2>
-									<h3>Join us at one of our upcoming meetings!</h3>
+									<h3>Join us at one of our upcoming meetings</h3>
 									<div class="responsive-cal">
-										<iframe
-											src="https://calendar.google.com/calendar/b/3/embed?height=526&wkst=1&bgcolor=%23FFFFFF&mode=AGENDA&src=tamu.edu_ad54lcc88gu8lclb6t8h61dr40%40group.calendar.google.com&color=%23875509&ctz=America%2FChicago"
-											style="border-width:0;" width="800" height="600" frameborder="0"
-											scrolling="no"></iframe>
+										<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&src=dGFtdS5lZHVfYWQ1NGxjYzg4Z3U4bGNsYjZ0OGg2MWRyNDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&showTitle=0&showNav=0&mode=AGENDA&showDate=0&showPrint=0&showTabs=1&showCalendars=0&showTz=1" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
-			<div id="threel"></div>
-			<div id="three" class="row" style="min-height: 877px;">
+			<div id="officers"></div>
+			<div id="three" class="row">
 				<div class="col">
 					<div class="row">
 						<div style="max-width: 150rem;" class="container">
 							<h2 style="text-align: center;margin-top: 0%;"><b>Officers</b></h2>
 							<div id="mmbc" style="display: flex;justify-content: center;flex-wrap: wrap;">
 								<div class="card" style="width: 200px; margin: 20px;">
-									<img class="card-img-top" src="img/priyanka.jpg" alt="Card image cap">
+									<img class="card-img-top" src="img/avery.jpg" alt="Card image cap">
 									<div class="card-body">
-										<h5 class="card-title"><b>Priyanka Paul</b></h5>
+										<h5 class="card-title"><b>Avery Erwin</b></h5>
 										<p class="card-text">President</p>
 										<div
 											style="display: flex;justify-content: center;width: 100%;padding: 16px;padding-top: 0;">
-											<a title='Email' target='_blank' href='mailto:priyankapaul9@tamu.edu'><i
-													class="fa fa-envelope"
-													style="font-size:16px; margin-right: 16px;"></i></a>
-											<a title='LinkedIn' target='_blank'
-												href='https://urldefense.proofpoint.com/v2/url?u=https-3A__www.linkedin.com_in_priyanka-2Dpaul-2Da7bb81145&d=DwMFaQ&c=u6LDEWzohnDQ01ySGnxMzg&r=U3SSNb7Ucu79Mpm2Z_UNSg&m=8BmcmvtvBCr5yvAVyxfPIDsJY0PRfmreIB-TjXUt-GQ&s=7xlVwep7caKxpldlcmYZT4sTwFN5S_JGn2Xx6R6z5RU&e='><i class="fa fa-linkedin"
-													style="font-size:16px; margin-right: 16px;"></i></a>
+											<a title='Email' target='_blank' href='mailto:acerwin@tamu.edu'><i
+												class="fa fa-envelope"
+												style="font-size:16px; margin-right: 16px;"></i></a>
+										<a title='LinkedIn' target='_blank'
+											href='https://www.linkedin.com/in/averyerwin/'><i class="fa fa-linkedin"
+												style="font-size:16px; margin-right: 16px;"></i></a>
+										<a title='Website' target='_blank' href='https://www.averyer.win/'><i
+												class="fa fa-link" style="font-size:16px;"></i></a>
 																					</div>
 									</div>
 								</div>
 
 								<div id="vp" class="card" style="width: 200px; margin: 20px;">
-									<img class="card-img-top" src="img/AveryE.jpg" alt="Card image cap">
-									<div class="card-body">
-										<h5 class="card-title"><b>Avery Erwin</b></h5>
-										<p class="card-text">Vice President</p>
-										<div
-											style="display: flex;justify-content: center;width: 100%;padding: 16px;padding-top: 0;">
-											<a title='Email' target='_blank' href='mailto:acerwin@tamu.edu'><i
-													class="fa fa-envelope"
-													style="font-size:16px; margin-right: 16px;"></i></a>
-											<a title='LinkedIn' target='_blank'
-												href='https://www.linkedin.com/in/averyerwin/'><i class="fa fa-linkedin"
-													style="font-size:16px; margin-right: 16px;"></i></a>
-											<a title='Website' target='_blank' href='https://www.averyer.win/'><i
-													class="fa fa-link" style="font-size:16px;"></i></a>
-										</div>
-									</div>
-								</div>
-
-								<div class="card" style="width: 200px; margin: 20px;">
 									<img class="card-img-top" src="img/person-placeholder.jpg" alt="Card image cap">
 									<div class="card-body">
-										<h5 class="card-title"><b>Joshi Chong</b></h5>
-										<p class="card-text">Treasurer</p>
-										<div
-											style="display: flex;justify-content: center;width: 100%;padding: 16px;padding-top: 0;">
-											<a title='Email' target='_blank' href=''><i class="fa fa-envelope"
-													style="font-size:16px; margin-right: 16px;"></i></a>
-											<a title='LinkedIn' target='_blank' href=''><i class="fa fa-linkedin"
-													style="font-size:16px;"></i></a>
-										</div>
-									</div>
-								</div>
-
-								<div class="card" style="width: 200px; margin: 20px;">
-									<img class="card-img-top" src="img/jenniferM.jpg" alt="Card image cap">
-									<div class="card-body">
-										<h5 class="card-title"><b>Jennifer Martin</b></h5>
-										<p class="card-text">Communications Officer</p>
-										<div style="display: flex;justify-content: center;width: 100%;padding: 16px;padding-top: 0;">
-											<a title="Email" target="_blank" href="mailto:jam77082@tamu.edu"><i class="fa fa-envelope" style="font-size:16px; margin-right: 16px;"></i></a>
-											<a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/jennifer-martin-38391a179/"><i class="fa fa-linkedin" style="font-size:16px; margin-right: 16px;"></i></a>
-											<a title="Website" target="_blank" href="http://people.tamu.edu/~jam77082/"><i class="fa fa-link" style="font-size:16px;"></i></a>
-										</div>
-									</div>
-								</div>
-
-								<div id="wm" class="card" style="width: 200px; margin: 20px;">
-									<img class="card-img-top"
-										src="img/J1.jpg"
-										alt="Card image cap">
-									<div class="card-body">
 										<h5 class="card-title"><b>Jayant Singh</b></h5>
-										<p class="card-text">Webmaster</p>
+										<p class="card-text">Vice President</p>
 										<div
 											style="display: flex;justify-content: center;width: 100%;padding: 16px;padding-top: 0;">
 											<a title='LinkedIn' target='_blank'
@@ -546,9 +486,46 @@ jQuery.get("https://ipinfo.io?token=b141e80f25813f", function (response) {
 									</div>
 								</div>
 
+								<div class="card" style="width: 200px; margin: 20px;">
+									<img class="card-img-top" src="img/person-placeholder.jpg" alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title"><b>Tyler Pomberg</b></h5>
+										<p class="card-text">Treasurer</p>
+										<div
+											style="display: flex;justify-content: center;width: 100%;padding: 16px;padding-top: 0;">
+											
+										</div>
+									</div>
+								</div>
+
+								<div class="card" style="width: 200px; margin: 20px;">
+									<img class="card-img-top" src="img/person-placeholder.jpg" alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title"><b>Joey Chou</b></h5>
+										<p class="card-text">Communications Officer</p>
+										<div style="display: flex;justify-content: center;width: 100%;padding: 16px;padding-top: 0;">
+											
+										</div>
+									</div>
+								</div>
+
+								<div id="wm" class="card" style="width: 200px; margin: 20px;">
+									<img class="card-img-top"
+										src="img/person-placeholder.jpg"
+										alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title"><b>Rishi Phatak</b></h5>
+										<p class="card-text">Webmaster</p>
+										<div
+											style="display: flex;justify-content: center;width: 100%;padding: 16px;padding-top: 0;">
+											
+										</div>
+									</div>
+								</div>
+
 
 							</div>
-							<div class="row">
+							<!-- <div class="row">
 								<div style="max-width: 150rem;" class="container">
 									<h2 style="text-align: center;margin-top: 20px;"><b>Members</b></h2>
 									<div id="mmsc" style="display: flex;justify-content: center;flex-wrap: wrap;">
@@ -664,14 +641,15 @@ jQuery.get("https://ipinfo.io?token=b141e80f25813f", function (response) {
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 
-					<div id="fivel"></div>
-					<div id="five" class="row" style="min-height: 877px;">
+					<div id="guests"></div>
+					<div id="five" class="row">
 						<div class="container">
-							<h2 style="text-align: center;"><b>Industry Partners</b></h2>
+							<h2 style="text-align: center;"><b>Guest Speakers</b></h2>
+							<h3 style="text-align: center;">Our guest speakers have worked at:</h3>
 							<div class="spons">
 								<!--insert sponsor image tags here-->
 								<img class="sp-im" src="img/microsoft.png">
@@ -691,42 +669,17 @@ jQuery.get("https://ipinfo.io?token=b141e80f25813f", function (response) {
 
 						</div>
 					</div>
-					<div id="fourl"></div>
-					<div id="four" class="row" style="min-height: 877px;">
-						<div class="container">
-							<div style="display: flex;justify-content: center;align-items: center;height: 100%;">
-								<form action="https://formspree.io/xknqgvze" method="POST">
-									<label>
-										Your email:
-										<input type="text" name="_replyto">
-									</label>
-									<label>
-										Your message:
-										<textarea style="height: 300px; resize: none;" name="message"></textarea>
-									</label>
-
-									<!-- your other form fields go here -->
-
-									<button type="submit">Send</button>
-									<p>Or feel free to shoot us an email at <a style="color: blue;"
-											href="mailto:tacs-officers@lists.tamu.edu">tacs-officers@lists.tamu.edu</a>
-									</p>
-								</form>
-
-							</div>
-						</div>
-					</div>
-
 				</div>
 			</div>
+			<div id="six" class="row" style="padding: 5%;"></div>
 			<div id="fut" class="row">
 				<span class="container">
 					<br>
 					<h5 style="width: 100%;text-align: center;color: #fff478;">{TACS}</h5>
-					<p style="width: 100%;text-align: center;">© 2020-2021 Texas A&M Computing Society</p>
+					<p style="width: 100%;text-align: center;">© 2021-2022 Texas A&M Computing Society</p>
 					<p style="width: 100%;text-align: center;">Created by <a style="color: #fff478;"
-							href="#wm">Jayant
-							Singh</a>. Themed by <a style="color: #fff478;" href="#vp">Avery Erwin</a>.</p>
+							href="#officers">Jayant
+							Singh</a>. Themed by <a style="color: #fff478;" href="#officers">Avery Erwin</a>.</p>
 				</div>
 
 
@@ -838,6 +791,44 @@ function svgRes(){
 	
 }
 			</script>
+
+<script>
+	function subscribe() {
+		
+
+		var email = document.getElementById("form_email").value;
+
+		if(email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+			var myHeaders = new Headers();
+			myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+			myHeaders.append("Referer", "https://listserv.tamu.edu/cgi-bin/wa?SUBED1=TACS&A=1");
+
+			var urlencoded = new URLSearchParams();
+			urlencoded.append("SUBED2", "TACS");
+			urlencoded.append("A", "1");
+			urlencoded.append("L", "TACS");
+			urlencoded.append("s", email);
+			urlencoded.append("p", "Anonymous");
+			urlencoded.append("b", "Subscribe");
+			urlencoded.append("_charset_", "UTF-8");
+
+			var requestOptions = {
+				method: 'POST',
+				headers: myHeaders,
+				body: urlencoded,
+				redirect: 'follow'
+			};
+
+			var success = "Thanks for subscribing! Please check your inbox to confirm your subscription within 48 hours.";
+
+			fetch("https://listserv.tamu.edu/cgi-bin/wa", requestOptions)
+				.then(response => alert(success))
+				.catch(error => alert(success));
+		} else {
+			alert("Invalid email address detected.");
+		}		
+	}
+</script>
 </body>
 
 </html>
