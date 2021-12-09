@@ -1,5 +1,5 @@
 # tacs.tamu.edu
-# Designed by: Jayant Singh (Webmaster at TACS)
-# Themed by: Avery Erwin (VP at TACS)
-# Updated by: Rishi Phatak
-## Fall 2021
+
+
+
+Designed by: Jayant Singh, Avery Erwin, Rishi Phatak
